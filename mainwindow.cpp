@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&workerThread, SIGNAL (finished()), &workerThread, SLOT (deleteLater()));
 
     workerThread.start();
-    this->statusBar()->showMessage(tr("www.gtronick.com"));
 
     QFile styleFile("style.qss");
     styleFile.open(QFile::ReadOnly);
